@@ -9,7 +9,6 @@ import router from './router'
 /* UI-Kit */
 import 'uikit/dist/css/uikit.min.css'
 import 'uikit/dist/js/uikit.min.js'
-import 'uikit/dist/js/uikit-icons.js'
 import 'uikit/dist/js/uikit-icons.min.js'
 
 /* Vue Bootstrap */

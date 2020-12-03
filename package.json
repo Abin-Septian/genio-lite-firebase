@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "bootstrap": "^4.5.3",
+    "bootstrap-icons": "^1.1.0",
     "dotenv": "^8.2.0",
     "pug": "^3.0.0",
     "uikit": "^3.5.10",

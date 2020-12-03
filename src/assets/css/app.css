@@ -5,9 +5,17 @@
     --CG-Blue: #1E83A8;
     --Blue-Green: #6396A8;
     --Gunmetal: #17333D;
-    --Success: #A8C5A5;
+    --Success: #64c05ac2;
     --Danger: #ED7D87;
     --Warning: #B2B7EB;
+}
+
+.app-text-light{
+    color: white;
+}
+
+.app-text-light:hover{
+    color: #3f3f3f;
 }
 
 .app-container-small{
@@ -60,4 +68,95 @@
 
 .app-bg-warning{
     background-color: var(--Warning);
+}
+
+.icon-hamburger{
+    mask: url("../icons/list.svg") no-repeat center;
+    background-color: darkgrey;
+    mask-size: 2em;
+    height: 2em;
+    width: 2em;
+}
+
+.icon-arrow-left{
+    mask: url("../icons/caret-left.svg") no-repeat center;
+    background-color: darkgrey;
+    mask-size: 2em;
+    height: 2em;
+    width: 2em;
+}
+
+.icon-pemasukan{
+    mask: url("../icons/node-plus.svg") no-repeat center;
+    background-color: #444444;
+    mask-size: 1.5em;
+    height: 3em;
+    width: 3em;
+}
+
+.icon-pengeluaran{
+    mask: url("../icons/node-minus.svg") no-repeat center;
+    background-color: #444444;
+    mask-size: 1.5em;
+    height: 3em;
+    width: 3em;
+}
+
+.icon-arrow-left:hover{
+    mask: url("../icons/caret-left-fill.svg") no-repeat center;
+    background-color: var(--Cyan-Process);
+    mask-size: 2em;
+    height: 2em;
+    width: 2em;
+}
+
+.icon-arrow-right{
+    mask: url("../icons/caret-right.svg") no-repeat center;
+    background-color: darkgrey;
+    mask-size: 2em;
+    height: 2em;
+    width: 2em;
+}
+
+.icon-arrow-right:hover{
+    mask: url("../icons/caret-right-fill.svg") no-repeat center;
+    background-color: var(--Cyan-Process);
+    mask-size: 2em;
+    height: 2em;
+    width: 2em;
+}
+
+.icon-book{
+    mask: url("../icons/journal-bookmark-fill.svg") no-repeat center;
+    mask-size: 1.5em;
+    height: 2em;
+    width: 2em;
+}
+
+.icon-newspaper{
+    mask: url("../icons/newspaper.svg") no-repeat center;
+    mask-size: 1.5em;
+    height: 2em;
+    width: 2em;
+}
+
+.icon-graph-up{
+    mask: url("../icons/graph-up.svg") no-repeat center;
+    mask-size: 1.5em;
+    height: 2em;
+    width: 2em;
+}
+
+.icon-tools{
+    mask: url("../icons/tools.svg") no-repeat center;
+    mask-size: 1.5em;
+    height: 2em;
+    width: 2em;
+}
+
+.icon-gear{
+    mask: url("../icons/gear.svg") no-repeat center;
+    mask-size: 1.5em;
+    height: 2em;
+    width: 2em;
 }
