@@ -1,0 +1,63 @@
+:root{
+    --Baby-Blue: #66D6FF;
+    --Cyan-Process: #32B6E6;
+    --Cerulean-Crayola: #31AAD6;
+    --CG-Blue: #1E83A8;
+    --Blue-Green: #6396A8;
+    --Gunmetal: #17333D;
+    --Success: #A8C5A5;
+    --Danger: #ED7D87;
+    --Warning: #B2B7EB;
+}
+
+.app-container-small{
+    max-width: 1000px;
+}
+
+@media only screen and (min-width: 960px){
+    .app-main-container{
+        margin-left: 240px;
+    }
+}
+
+@media only screen and (max-width: 959px){
+    .app-main-container{
+        margin: 0 20px;
+    }
+}
+
+.app-bg-1{
+    background-color: var(--Baby-Blue);
+}
+
+.app-bg-2{
+    background-color: var(--Cyan-Process);
+}
+
+.app-bg-3{
+    background-color: var(--Cerulean-Crayola);
+}
+
+.app-bg-4{
+    background-color: var(--CG-Blue);
+}
+
+.app-bg-5{
+    background-color: var(--Blue-Green);
+}
+
+.app-bg-6{
+    background-color: var(--Gunmetal);
+}
+
+.app-bg-success{
+    background-color: var(--Success);
+}
+
+.app-bg-danger{
+    background-color: var(--Danger);
+}
+
+.app-bg-warning{
+    background-color: var(--Warning);
+}
