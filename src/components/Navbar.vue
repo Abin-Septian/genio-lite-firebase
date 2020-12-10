@@ -17,20 +17,22 @@
             a
               img.rounded-circle.bg-secondary.text-center(
                 src="@/assets/logo.png",
-                style="height: 40px; width: 40px"
+                style="height: 50px; width: 50px"
               )
-              div(
-                uk-drop="animation: uk-animation-slide-top-small; duration: 500"
-              )
-                .uk-card.uk-card-body.uk-card-default
-                  div test
-                  hr
-                  div test
-                  hr
-                  div test
-                  hr
-                  .d-flex.justify-content-end
-                    button.btn.btn-danger.uk-text-capitalize logout
+              <div uk-dropdown="mode: click">
+                <ul class="uk-nav uk-dropdown-nav">
+                  <li class="uk-active"><a href="#">Active</a></li>
+                  <li><a href="#">Item</a></li>
+                  <li class="uk-nav-header">Header</li>
+                  <li><a href="#">Item</a></li>
+                  <li><a href="#">Item</a></li>
+                  <li class="uk-nav-divider"></li>
+                  <li><a href="#">Item</a></li>
+                </ul>
+                hr
+                .d-flex
+                    button.btn.btn-danger.btn-block.uk-text-capitalize logout
+              </div>
 
         ul.uk-navbar-nav(class="uk-hidden@m uk-hidden@m")
           li

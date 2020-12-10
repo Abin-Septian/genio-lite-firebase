@@ -1,12 +1,13 @@
 <template lang="pug">
 .tm-sidebar-left
   ul.uk-nav.uk-nav-default
-    div(v-for="item in items", :key="index") 
-      li.px-2.py-2.uk-nav-header.app-bg-5.text-white.media
+    div(v-for="(item, index) in items", :key="index") 
+      li.p2.uk-nav-header.app-bg-5.text-white.media
         span.align-self-center.mr-2(v-bind:class="item.icon")
         span.align-self-center {{ item.name }}
-      li.uk-padding-small.bg-dark(v-for="child in item.child", :key="item.id")
-        router-link.ml-4.text-white(v-bind:to="child.path") {{ child.name }}
+      router-link(v-for="child in item.child", :key="item.id" v-bind:to="child.path")
+        li.uk-padding-small.bg-dark
+          .ml-4.text-white {{ child.name }}
   //- ul(uk-accordion="collapsible: false")
   //-     li(v-for="item in items" :key="index")
   //-         a.uk-accordion-title(href="#") {{ item.name }}
