@@ -18,6 +18,8 @@ import 'bootstrap/dist/css/bootstrap.css'
 /* APP CSS */
 import '@/assets/css/app.css'
 
+import "vue2-datepicker/index.css";
+
 Vue.config.productionTip = false
 
 Vue.use(Vuex)

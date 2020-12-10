@@ -1,13 +1,14 @@
 <template lang="pug">
-.tm-sidebar-left
+.app-sidebar-left.bg-dark
   ul.uk-nav.uk-nav-default
     div(v-for="(item, index) in items", :key="index") 
-      li.p2.uk-nav-header.app-bg-5.text-white.media
+      li.p-2.uk-nav-header.app-bg-5.text-white.uk-flex
+        .uk-margin-small-left
         span.align-self-center.mr-2(v-bind:class="item.icon")
-        span.align-self-center {{ item.name }}
-      router-link(v-for="child in item.child", :key="item.id" v-bind:to="child.path")
+        span.align-self-center.uk-text-bold {{ item.name }}
+      router-link.text-white(v-for="child in item.child", :key="item.id" v-bind:to="child.path")
         li.uk-padding-small.bg-dark
-          .ml-4.text-white {{ child.name }}
+          .uk-margin-medium-left.text-white {{ child.name }}
   //- ul(uk-accordion="collapsible: false")
   //-     li(v-for="item in items" :key="index")
   //-         a.uk-accordion-title(href="#") {{ item.name }}
@@ -102,7 +103,7 @@ export default {
 </script>
 
 <style scoped>
-.tm-sidebar-left {
+.app-sidebar-left {
   position: fixed;
   top: 80px;
   width: 240px;

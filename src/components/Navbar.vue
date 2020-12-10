@@ -19,20 +19,23 @@
                 src="@/assets/logo.png",
                 style="height: 50px; width: 50px"
               )
-              <div uk-dropdown="mode: click">
-                <ul class="uk-nav uk-dropdown-nav">
-                  <li class="uk-active"><a href="#">Active</a></li>
-                  <li><a href="#">Item</a></li>
-                  <li class="uk-nav-header">Header</li>
-                  <li><a href="#">Item</a></li>
-                  <li><a href="#">Item</a></li>
-                  <li class="uk-nav-divider"></li>
-                  <li><a href="#">Item</a></li>
-                </ul>
+              div(uk-dropdown="mode: hover")
+                ul.uk-nav.uk-dropdown-nav
+                  li.uk-active
+                    a(href="#") Active
+                  li
+                    a(href="#") Item
+                  li.uk-nav-header Header
+                  li
+                    a(href="#") Item
+                  li
+                    a(href="#") Item
+                  li.uk-nav-divider
+                  li
+                    a(href="#") Item
                 hr
                 .d-flex
                     button.btn.btn-danger.btn-block.uk-text-capitalize logout
-              </div>
 
         ul.uk-navbar-nav(class="uk-hidden@m uk-hidden@m")
           li
@@ -41,16 +44,23 @@
                 src="@/assets/logo.png",
                 style="height: 40px; width: 40px"
               )
-              div(uk-drop="mode:click")
-                .uk-card.uk-card-body.uk-card-default
-                  div test
-                  hr
-                  div test
-                  hr
-                  div test
-                  hr
-                  .d-flex.justify-content-end
-                    button.btn.btn-danger.uk-text-capitalize logout
+              div(uk-dropdown="mode: click")
+                ul.uk-nav.uk-dropdown-nav
+                  li.uk-active
+                    a(href="#") Active
+                  li
+                    a(href="#") Item
+                  li.uk-nav-header Header
+                  li
+                    a(href="#") Item
+                  li
+                    a(href="#") Item
+                  li.uk-nav-divider
+                  li
+                    a(href="#") Item
+                hr
+                .d-flex
+                    button.btn.btn-danger.btn-block.uk-text-capitalize logout
 </template>
 
 <script>
