@@ -2,11 +2,13 @@
 .uk-container.app-container-small
     div(class="uk-visible@m", uk-grid)
         .uk-width-1-2.uk-flex
-            img(
+            img.align-self-bottom.uk-margin-small-right(
                 src="../assets/flaticon/png/005-tick.png",
                 style="width: 4rem; height: 4rem"
             )
-            h3.uk-padding-small Buku Kas
+            .align-self-bottom.uk-margin-small-left
+                h3 Buku
+                span Buku Kas
         .uk-width-1-2.uk-flex
             .uk-width-1-2.uk-flex.uk-flex-right
             .uk-width-1-2.uk-flex.uk-flex-right
