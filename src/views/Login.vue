@@ -15,7 +15,8 @@
                     div.uk-form-controls
                         input.uk-input(id="form-stacked-text" type="password" placeholder="Password" v-model="password")
                     hr.uk-divider-icon 
-                    button.uk-button.uk-button-primary.uk-width-1-1.uk-margin-small-bottom Login
+                    router-link(to="/buku")
+                        button.uk-button.uk-button-primary.uk-width-1-1.uk-margin-small-bottom Login
                     router-link(to="/register") 
                         button.uk-button.uk-button-danger.uk-width-1-1.uk-margin-small-bottom Register
 </template>

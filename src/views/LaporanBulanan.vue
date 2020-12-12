@@ -5,7 +5,7 @@
 
 <script>
 export default {
-    name: 'laporan_bulanan',
+    name: 'laporan-bulanan',
 
 }
 </script>

@@ -5,7 +5,7 @@
 
 <script>
 export default {
-    name: 'laporan_harian',
+    name: 'laporan-harian',
 
 }
 </script>

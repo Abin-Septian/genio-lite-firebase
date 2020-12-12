@@ -3,15 +3,18 @@
     div(class="uk-visible@m" uk-grid)
         .uk-width-1-2.uk-flex
             img(src="../assets/flaticon/png/005-tick.png" style="width: 4rem; height: 4rem;")
-            h3.uk-padding-small Buku Piutang
+            .align-self-bottom.uk-margin-small-left
+                h3 Buku Piutang
+                span Catat Piutang Anda
         .uk-width-1-2.uk-flex
             .uk-width-1-2.uk-flex.uk-flex-right
-            .uk-width-1-2.uk-flex.uk-flex-right
-                div test
+            .uk-width-1-2.uk-flex-right
+                .uk-text-right.uk-text-bold Saldo
+                blockquote.uk-text-right.uk-text-lead.uk-text-primary Rp. 1.000.000,-
         .uk-width-1-2.uk-flex
-            span.icon-arrow-left.align-self-center
+            span.icon-arrow-left.align-self-center(uk-tooltip="title:bulan sebelumnya;")
             span.px-4.align-self-center.uk-text-capitalize januari 2020
-            span.icon-arrow-right.align-self-center
+            span.icon-arrow-right.align-self-center(uk-tooltip="title:bulan selanjutnya; pos: top")
         .uk-width-1-2.uk-flex.uk-flex-right
             button.uk-button-primary.uk-text-capitalize.uk-flex.uk-flex-around.uk-width-2-5(uk-toggle="target: #modal-piutang" type="button")
                 span.align-self-center.icon-pemasukan

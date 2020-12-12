@@ -11,17 +11,18 @@
                 span Buku Kas
         .uk-width-1-2.uk-flex
             .uk-width-1-2.uk-flex.uk-flex-right
-            .uk-width-1-2.uk-flex.uk-flex-right
-                    div test
+            .uk-width-1-2.uk-flex-right
+                .uk-text-right.uk-text-bold Saldo
+                blockquote.uk-text-right.uk-text-lead.uk-text-primary Rp. 1.000.000,-
         .uk-width-1-4.uk-flex
-            span.icon-arrow-left.align-self-center
+            span.icon-arrow-left.align-self-center(uk-tooltip="title:bulan sebelumnya;")
             span.px-4.align-self-center.uk-text-capitalize januari 2020
-            span.icon-arrow-right.align-self-center
+            span.icon-arrow-right.align-self-center(uk-tooltip="title:bulan selanjutnya; pos: top")
         .uk-width-3-4.uk-flex.uk-flex-right
-            button.uk-button-primary.uk-text-capitalize.uk-flex.uk-margin-small-right(uk-toggle="target: #modal-pemasukan" type="button")
+            button.uk-button-primary.uk-text-capitalize.uk-flex.uk-margin-small-right(uk-toggle="target: #modal-pemasukan" type="button" uk-tooltip="title: Tambah transaksi pemasukan; pos: bottom")
                 span.align-self-center.icon-pemasukan
                 span.align-self-center Input Pemasukan
-            button.uk-button-default.uk-text-capitalize.uk-flex(uk-toggle="target: #modal-pengeluaran" type="button")
+            button.uk-button-default.uk-text-capitalize.uk-flex(uk-toggle="target: #modal-pengeluaran" type="button" uk-tooltip="title: Tambah transaksi pengeluaran; pos: bottom")
                 span.align-self-center.icon-pengeluaran
                 span.align-self-center Input Pengeluaran
 

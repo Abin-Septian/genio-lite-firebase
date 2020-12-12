@@ -12,13 +12,15 @@ import LaporanTahunan from '@/views/LaporanTahunan'
 import Invoice from '@/views/Invoice'
 import Catatan from '@/views/Catatan'
 import Kategori from '@/views/Kategori'
+import PengaturanBukuKas from '@/views/PengaturanBukuKas'
+import Profile from '@/views/Profile'
 
 Vue.use(Router)
 
 const routes = [
 	{
 		path: '/',
-		redirect: '/buku',
+		redirect: '/login',
 		name: 'dashboard',
 		component: Dashboard,
 		children: [
@@ -57,6 +59,14 @@ const routes = [
 			{
 				path:"/kategori",
 				component: Kategori,
+			},
+			{
+				path:"/buku_kas",
+				component: PengaturanBukuKas,
+			},
+			{
+				path:"/profile",
+				component: Profile,
 			},
 		]
 	},

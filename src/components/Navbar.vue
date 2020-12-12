@@ -35,7 +35,8 @@
                     a(href="#") Item
                 hr
                 .d-flex
-                    button.btn.btn-danger.btn-block.uk-text-capitalize logout
+                    router-link(to="/login").uk-width-1-1
+                        button.btn.btn-danger.btn-block.uk-text-capitalize logout
 
         ul.uk-navbar-nav(class="uk-hidden@m uk-hidden@m")
           li
@@ -60,7 +61,8 @@
                     a(href="#") Item
                 hr
                 .d-flex
-                    button.btn.btn-danger.btn-block.uk-text-capitalize logout
+                    router-link(to="/login")
+                        button.btn.btn-danger.btn-block.uk-text-capitalize logout
 </template>
 
 <script>

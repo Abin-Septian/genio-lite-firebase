@@ -24,12 +24,14 @@
                     label.uk-form-label(for="form-stacked-text") Re-Enter Password
                     div.uk-form-controls
                         input.uk-input(id="form-stacked-text" type="password")
-                    hr.uk-divider-icon 
-                    button.uk-button.uk-button-danger.uk-width-1-1.uk-margin-small-bottom Register
-                    span have an acount ? 
-                        span 
-                            router-link(to="/login")  
-                                span Login
+                    hr.uk-divider-icon
+                    router-link(to="/buku")
+                        button.uk-button.uk-button-primary.uk-width-1-1.uk-margin-small-bottom Register
+                    .uk-text-center
+                        span have an acount ? 
+                            span 
+                                router-link(to="/login")  
+                                    span Login
 
 </template>
 
