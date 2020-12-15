@@ -1,25 +1,22 @@
 
 
 const state = {
-    bukuKas: [ 
+    utang: [ 
         {
-            tipe : 'pemasukan',
             tanggal : '2020-01-11',
-            kategori : 'test',
+            jatuhTempo: '',
             deskripsi : 'test',
             nominal : 10000,
         },
         {
-            tipe : 'pengeluaran',
             tanggal : '2020-01-11',
-            kategori : 'test',
+            jatuhTempo: '2020-10-11',
             deskripsi : 'test',
             nominal : 10000,
         },
         {
-            tipe : 'pemasukan',
             tanggal : '2020-01-11',
-            kategori : 'test',
+            jatuhTempo: '',
             deskripsi : 'test',
             nominal : 10000,
         },
@@ -27,18 +24,18 @@ const state = {
 };
 
 const getters = {
-    allBukuKas: (state) => state.bukuKas
+    allUtang: (state) => state.utang
 };
 
 const mutations = {
-    addTransaksi: (state, payload) => {
-        state.bukuKas.push(payload);
+    addUtang: (state, payload) => {
+        state.utang.push(payload);
     }
 };
 
 const actions = {
-    saveTransaksi: ({ commit }, payload) => {
-        commit('addTransaksi', payload);
+    saveUtang: ({ commit }, payload) => {
+        commit('addUtang', payload);
     }
 };
 

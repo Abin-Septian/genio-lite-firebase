@@ -32,7 +32,7 @@
             button.uk-button.uk-button-primary.uk-text-capitalize.uk-flex.uk-width-1-1(uk-toggle="target: #modal-hutang" type="button")
                 span.align-self-center.uk-width-1-1 Input Utang
 
-    table-content(:datas="allPemasukan")
+    table-utang(:datas="daftarUtang")
 
     #modal-hutang(uk-modal)
         .uk-modal-dialog
@@ -40,49 +40,63 @@
             .uk-modal-header
                 h2.uk-modal-title Form Hutang
             .uk-modal-body
-                form
+                form()
                     fieldset.uk-fieldset
                         .uk-margin
                             label Tanggal
-                            date-picker.uk-width-1-1
+                            date-picker.uk-width-1-1(v-model="formUtang.tanggal" value-type="format" format="YYYY-MM-DD")
                         .uk-margin
                             label
                                 input.uk-checkbox(type="checkbox" v-model="toggle" true-value="yes" false-value="no")
                                 span.uk-margin-small-left Tanggal Jatuh Tempo
-                            date-picker.uk-width-1-1(v-if="toggle === 'yes'")
-                        .uk-margin
-                            label Kategori
-                            select.uk-select
-                                option option 1
+                            date-picker.uk-width-1-1(v-if="toggle === 'yes'" v-model="formUtang.jatuhTempo" value-type="format" format="YYYY-MM-DD")
                         .uk-margin
                             label Deskripsi
-                            textarea.uk-textarea(rows="3")
+                            textarea.uk-textarea(rows="3" v-model="formUtang.deskripsi")
                         .uk-margin
                             label Nominal
-                            input.uk-input(type="text")
+                            input.uk-input(type="text" v-model="formUtang.nominal")
             .uk-modal-footer.uk-flex.uk-flex-right
                 button.uk-button.uk-button-default.uk-modal-close.uk-margin-small-right(type="button") Batal
-                a.uk-button.uk-button-primary(href="#modal-group-2" uk-toggle) Simpan
+                button.uk-button.uk-button-primary.uk-modal-close(type="button" @click="saveUtang(formUtang)") Simpan
 </template>
 
 <script>
-import { mapGetters } from "vuex";
-import TableContent from "@/components/TableContent";
+import { mapGetters, mapActions } from "vuex";
+import TableUtang from "@/components/TableUtangPiutang";
 import DatePicker from "vue2-datepicker";
+
+const utang = {
+    tanggal :  '',
+    jatuhTempo:  '',
+    deskripsi :  '',
+    nominal : '',
+};
 
 export default {
 	name: "buku-utang",
 	data() {
 		return {
             toggle: 'no',
+            formUtang : {
+                    tanggal :  '',
+                    jatuhTempo:  '',
+                    deskripsi :  '',
+                    nominal : '',
+                },
         };
 	},
 	components: {
-        TableContent,
+        TableUtang,
         DatePicker,
 	},
 	computed: {
-		...mapGetters(["allPemasukan"])
-	}
+		...mapGetters({
+                daftarUtang: 'allUtang'
+            })
+    },
+    methods: {
+        ...mapActions(['saveUtang']),
+    }
 };
 </script>

@@ -29,7 +29,7 @@
             button.uk-button.uk-button-primary.uk-text-capitalize.uk-flex.uk-width-1-1(uk-toggle="target: #modal-piutang" type="button")
                 span.align-self-center.uk-width-1-1 Input Piutang
   
-    table-content(:datas="allPemasukan")
+    table-content(:datas="allPiutang")
 
     #modal-piutang(uk-modal)
         .uk-modal-dialog
@@ -64,7 +64,7 @@
 
 <script>
 import { mapGetters } from "vuex";
-import TableContent from "@/components/TableContent";
+import TableContent from "@/components/TableUtangPiutang";
 import DatePicker from "vue2-datepicker";
 
 export default {
@@ -79,7 +79,7 @@ export default {
 		DatePicker,
 	},
 	computed: {
-		...mapGetters(["allPemasukan"])
+		...mapGetters(["allPiutang"])
 	}
 };
 </script>
