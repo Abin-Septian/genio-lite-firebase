@@ -19,7 +19,7 @@
             span.px-4.align-self-center.uk-text-capitalize januari 2020
             span.icon-arrow-right.align-self-center(uk-tooltip="title:bulan selanjutnya; pos: top")
         .uk-width-1-2.d-flex.justify-content-end
-            button.uk-button-primary.uk-text-capitalize.uk-flex.uk-flex-around.uk-width-2-5(uk-toggle="target: #modal-hutang" type="button")
+            button.uk-button-primary.uk-text-capitalize.uk-flex.uk-flex-around.uk-width-2-5(uk-toggle="target: #modal-utang" type="button"  uk-tooltip="title: catat utang baru; pos: bottom")
                 span.align-self-center.icon-pemasukan
                 span.align-self-center Input Utang
 
@@ -29,16 +29,16 @@
             span.uk-margin-small.align-self-center.uk-text-capitalize Desember 2020
             span.icon-arrow-right.align-self-center
         .uk-width-1-2.uk-flex
-            button.uk-button.uk-button-primary.uk-text-capitalize.uk-flex.uk-width-1-1(uk-toggle="target: #modal-hutang" type="button")
+            button.uk-button.uk-button-primary.uk-text-capitalize.uk-flex.uk-width-1-1(uk-toggle="target: #modal-utang" type="button")
                 span.align-self-center.uk-width-1-1 Input Utang
 
     table-utang(:datas="daftarUtang")
 
-    #modal-hutang(uk-modal)
+    #modal-utang(uk-modal)
         .uk-modal-dialog
-            button.uk-modal-close-default(type="button" uk-close)
+            button.uk-modal-close-default(type="button" uk-close @click="reset()")
             .uk-modal-header
-                h2.uk-modal-title Form Hutang
+                h2.uk-modal-title Form Utang
             .uk-modal-body
                 form()
                     fieldset.uk-fieldset
@@ -57,21 +57,14 @@
                             label Nominal
                             input.uk-input(type="text" v-model="formUtang.nominal")
             .uk-modal-footer.uk-flex.uk-flex-right
-                button.uk-button.uk-button-default.uk-modal-close.uk-margin-small-right(type="button") Batal
-                button.uk-button.uk-button-primary.uk-modal-close(type="button" @click="saveUtang(formUtang)") Simpan
+                button.uk-button.uk-button-default.uk-modal-close.uk-margin-small-right(type="button" @click="reset()") Batal
+                button.uk-button.uk-button-primary.uk-modal-close(type="button" @click="submit(formUtang)") Simpan
 </template>
 
 <script>
 import { mapGetters, mapActions } from "vuex";
 import TableUtang from "@/components/TableUtangPiutang";
 import DatePicker from "vue2-datepicker";
-
-const utang = {
-    tanggal :  '',
-    jatuhTempo:  '',
-    deskripsi :  '',
-    nominal : '',
-};
 
 export default {
 	name: "buku-utang",
@@ -97,6 +90,14 @@ export default {
     },
     methods: {
         ...mapActions(['saveUtang']),
+        submit(payload) {
+            this.saveUtang(payload);
+
+            Object.assign(this.$data, this.$options.data());
+        },
+        reset() {
+            Object.assign(this.$data, this.$options.data());
+        }
     }
 };
 </script>

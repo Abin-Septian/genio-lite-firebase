@@ -16,5 +16,6 @@ export default new Vuex.Store({
         Kategori,
         Utang,
         Piutang,
-    }
+    },
+    strict: false,
 }) 

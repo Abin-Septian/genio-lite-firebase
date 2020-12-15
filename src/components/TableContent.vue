@@ -3,22 +3,20 @@
     table.uk-table.uk-table-responsive.uk-table-divider.uk-table-striped
         thead
             tr
-                th.uk-text-center Tipe 
-                th.uk-text-center Tanggal
-                th.uk-text-center Kategori
-                th.uk-text-center Deskripsi
-                th.uk-text-center Nominal
-                //- th.uk-text-center Saldo
-                th.uk-text-center Edit
+                th Tipe 
+                th Tanggal
+                th Kategori
+                th Deskripsi
+                th Nominal
+                //- th Saldo
+                th Edit
         tbody
             tr(v-for="(data, index) in datas" :key="index")
                 td {{ data.tipe }}
                 td {{ data.tanggal }}
                 td {{ data.kategori }}
                 td {{ data.deskripsi }}
-                td.uk-flex
-                    .uk-width-1-6 Rp. 
-                    .uk-width-5-6.uk-text-right {{ data.nominal }}
+                td Rp. {{ data.nominal }}
                 //- td 
                 td 
 

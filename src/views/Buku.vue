@@ -51,7 +51,7 @@
 
     #modal-pemasukan(uk-modal)
         .uk-modal-dialog
-            button.uk-modal-close-default(type="button" uk-close @click="resetPemasukan()")
+            button.uk-modal-close-default(type="button" uk-close @click="reset()")
             .uk-modal-header
                 h2.uk-modal-title Form Pemasukan
             .uk-modal-body
@@ -71,12 +71,12 @@
                             label Nominal
                             input.uk-input(type="text" v-model="formPemasukan.nominal")
             .uk-modal-footer.uk-flex.uk-flex-right
-                button.uk-button.uk-button-default.uk-modal-close.uk-margin-small-right(type="button" @click="resetPemasukan()") Batal
-                button.uk-button.uk-button-primary.uk-modal-close(type="button" @click="saveTransaksi(formPemasukan)") Simpan
+                button.uk-button.uk-button-default.uk-modal-close.uk-margin-small-right(type="button" @click="reset()") Batal
+                button.uk-button.uk-button-primary.uk-modal-close(type="button" @click="submit( formPemasukan )") Simpan
 
     #modal-pengeluaran(uk-modal)
         .uk-modal-dialog
-            button.uk-modal-close-default(type="button" uk-close @click="resetPengeluaran()")
+            button.uk-modal-close-default(type="button" uk-close @click="reset()")
             .uk-modal-header
                 h2.uk-modal-title Form Pengeluaran
             .uk-modal-body
@@ -96,8 +96,8 @@
                             label Nominal
                             input.uk-input(type="text" v-model="formPengeluaran.nominal")
             .uk-modal-footer.uk-flex.uk-flex-right
-                button.uk-button.uk-button-default.uk-modal-close.uk-margin-small-right(type="button" @click="resetPengeluaran()") Batal
-                button.uk-button.uk-button-primary.uk-modal-close(type="button" @click="saveTransaksi(formPengeluaran)") Simpan
+                button.uk-button.uk-button-default.uk-modal-close.uk-margin-small-right(type="button" @click="reset()") Batal
+                button.uk-button.uk-button-primary.uk-modal-close(type="button" @click="submit( formPengeluaran )") Simpan
       
 </template>
 
@@ -139,14 +139,14 @@ export default {
 	},
 	methods: {
         ...mapActions(['saveTransaksi']),
-        resetPemasukan(event) {
-            this.formPemasukan = this.pemasukan;
+        submit( payload ) {
+            this.saveTransaksi( payload );
 
-            event.preventDefault();
+            this.reset();
         },
-        resetPengeluaran() {
-            console.log('test')
-        },
+        reset() {
+            Object.assign(this.$data, this.$options.data())
+        }
     }
 };
 </script>
