@@ -19,6 +19,11 @@
                         button.uk-button.uk-button-primary.uk-width-1-1.uk-margin-small-bottom Login
                     router-link(to="/register") 
                         button.uk-button.uk-button-danger.uk-width-1-1.uk-margin-small-bottom Register
+                    .uk-text-center
+                        span Forgot password ? 
+                            span 
+                                router-link(to="/buku")  
+                                    span Click here
 </template>
 
 <script>
