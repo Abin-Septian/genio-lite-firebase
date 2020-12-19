@@ -3,7 +3,7 @@
     div(class="uk-visible@m", uk-grid)
         .uk-width-1-2.uk-flex
             img.align-self-bottom.uk-margin-small-right(
-                src="../assets/flaticon/png/005-tick.png",
+                src="../assets/flaticon/png/038-medal.png",
                 style="width: 4rem; height: 4rem"
             )
             .align-self-bottom.uk-margin-small-left
@@ -13,7 +13,7 @@
             .uk-width-1-2.uk-flex.uk-flex-right
             .uk-width-1-2.uk-flex-right
                 .uk-text-right.uk-text-bold Saldo
-                blockquote.uk-text-right.uk-text-lead.uk-text-primary Rp. 1.000.000,-
+                blockquote.uk-text-right.uk-text-lead.uk-text-primary(uk-tooltip="title: Saldo akhir buku kas; pos: bottom-right") Rp. 1.000.000,-
         .uk-width-1-4.uk-flex
             span.icon-arrow-left.align-self-center(uk-tooltip="title:bulan sebelumnya;")
             span.px-4.align-self-center.uk-text-capitalize januari 2020
@@ -29,7 +29,7 @@
     .uk-container.uk-container-small(class="uk-hidden@m", uk-grid, uk-flex)
         .uk-width-1-1.uk-flex
             img.align-self-bottom.uk-margin-small-right(
-                src="../assets/flaticon/png/005-tick.png",
+                src="../assets/flaticon/png/038-medal.png",
                 style="width: 4rem; height: 4rem"
             )
             .align-self-bottom.uk-margin-small-left

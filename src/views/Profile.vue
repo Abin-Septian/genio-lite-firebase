@@ -3,7 +3,7 @@
     div(class="uk-visible@m" uk-grid)
         .uk-width-1-1.uk-flex
             img.align-self-bottom.uk-margin-small-right(
-                src="../assets/flaticon/png/013-file.png",
+                src="../assets/flaticon/png/033-network.png",
                 style="width: 4rem; height: 4rem"
             )
             .uk-margin-small-left.align-self-bottom

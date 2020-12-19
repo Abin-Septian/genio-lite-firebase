@@ -22,14 +22,14 @@
                     li(v-for="(item, index) in allKategori.pemasukan" :key="index") {{ item }}
                 div
                     input.uk-input(class= "uk-width-3-4@m" v-model="pemasukan" type="text" placeholder="Masukkan Kategori" @keyup.enter="saveKategoriPemasukan(pemasukan)")
-                    button.uk-button.uk-button-primary(class="uk-width-1-4@m" @click="saveKategoriPemasukan(pemasukan)") Tambah
+                    button.uk-button.uk-button-primary(class="uk-width-1-4@m" @click="saveKategoriPemasukan(pemasukan)" uk-tooltip="title: Tambah kategori pemasukan; pos: bottom") Tambah
             div(class="uk-width-1-2@m uk-width-1-1@m")
                 h4.uk-margin Pengeluaran
                 ul.uk-list.uk-list-striped 
                     li(v-for="(item, index) in allKategori.pengeluaran" :key="index") {{ item }}
                 div
                     input.uk-input(class= "uk-width-3-4@m" v-model="pengeluaran" type="text" placeholder="Masukkan Kategori" @keyup.enter="saveKategoriPengeluaran(pengeluaran)")
-                    button.uk-button.uk-button-primary(class="uk-width-1-4@m" @click="saveKategoriPengeluaran(pengeluaran)") Tambah
+                    button.uk-button.uk-button-primary(class="uk-width-1-4@m" @click="saveKategoriPengeluaran(pengeluaran)" uk-tooltip="title: Tambah kategori pengeluaran; pos: bottom") Tambah
 
 
 </template>
