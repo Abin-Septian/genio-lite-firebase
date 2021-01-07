@@ -18,10 +18,20 @@ import Profile from '@/views/Profile'
 Vue.use(Router)
 
 const routes = [
-	{
+    {
+        path: '/login',
+        name: 'Login',
+        component: Login
+    },
+    {
+        path: '/register',
+        name: 'Register',
+        component: Register
+    },
+    {
 		path: '/',
-		redirect: '/login',
-		name: 'dashboard',
+		redirect: '/buku',
+		name: 'Dashboard',
 		component: Dashboard,
 		children: [
 			{

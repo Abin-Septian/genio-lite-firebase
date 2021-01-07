@@ -28,15 +28,10 @@
                   li.uk-nav-header Header
                   li
                     a(href="#") Item
-                  li
-                    a(href="#") Item
-                  li.uk-nav-divider
-                  li
-                    a(href="#") Item
                 hr
                 .d-flex
-                    router-link(to="/login").uk-width-1-1
-                        button.btn.btn-danger.btn-block.uk-text-capitalize logout
+                    .uk-width-1-1
+                        button.btn.btn-danger.btn-block.uk-text-capitalize(@click="signOut()") logout
 
         ul.uk-navbar-nav(class="uk-hidden@m uk-hidden@m")
           li
@@ -61,10 +56,24 @@
                     a(href="#") Item
                 hr
                 .d-flex
-                    router-link(to="/login")
-                        button.btn.btn-danger.btn-block.uk-text-capitalize logout
+                    button.btn.btn-danger.btn-block.uk-text-capitalize(@click="signOut()") logout
 </template>
 
 <script>
-export default {};
+import firebase from "firebase";
+
+export default {
+    methods: {
+        signOut() {
+            firebase
+            .auth()
+            .signOut()
+            .then(() => {
+                this.$router.replace({
+                name: "Login"
+                });
+            });
+        }
+    } 
+};
 </script>
